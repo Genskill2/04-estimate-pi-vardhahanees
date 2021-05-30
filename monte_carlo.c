@@ -54,7 +54,6 @@ float mc_pi(int result)
 	}
 		float pi = ((4*circle)/ result);
 		return (pi);
-	
 }
 	
 	 
