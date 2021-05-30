@@ -23,11 +23,13 @@ int main(void) {
 }
 } 
 float wallis_pi(int i)
-{	float estimate=0.0;
-	for (int j=1;j<=i;j++)
+{	float estimate=1.0;
+	for (int j=1; j<i; j++)
+	{ 
+		float num = 4.0*j*j;
+		estimate *= num/(num-1);
+	}
 	
-		estimate= estimate + (2*(4*j*j)/((4*j*j)-1));
-	
-	return (estimate);
+	return (estimate*2);
 	}
 
