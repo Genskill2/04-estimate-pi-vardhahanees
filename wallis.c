@@ -14,13 +14,20 @@ int main(void) {
       abort();
     }
   }
-
   for (int i=500; i<3000; i++) {
     pi = wallis_pi(i);
     if (!(fabs(pi - M_PI) < 0.01)) {
       printf("Estimate with even %d iterations is %f which is not accurate enough.\n", i, pi);
       abort();
     }
-  }
 }
+} 
+float wallis_pi(int i)
+{	float estimate=0.0;
+	for (int j=1;j<=i;j++)
+	
+		estimate= estimate + (2*(4*j*j)/((4*j*j)-1));
+	
+	return (estimate);
+	}
 
