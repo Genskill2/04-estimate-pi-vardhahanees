@@ -31,5 +31,5 @@ float wallis_pi(int i)
 	}
 	
 	return (estimate*2);
-	}
+}
 
